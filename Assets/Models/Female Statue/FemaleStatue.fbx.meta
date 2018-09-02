@@ -1,0 +1,212 @@
+fileFormatVersion: 2
+guid: 04ea7064a52f6554a9114e811d8225ae
+timeCreated: 1524706904
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: AfterCharacter:ikHandle1
+    100002: AfterCharacter:ikHandle2
+    100004: AfterCharacter:ikHandle3
+    100006: AfterCharacter:ikHandle4
+    100008: AfterCharacter:ikHandle5
+    100010: AfterCharacter:ikHandle6
+    100012: AfterCharacter:joint1
+    100014: AfterCharacter:joint10
+    100016: AfterCharacter:joint11
+    100018: AfterCharacter:joint12
+    100020: AfterCharacter:joint13
+    100022: AfterCharacter:joint14
+    100024: AfterCharacter:joint15
+    100026: AfterCharacter:joint16
+    100028: AfterCharacter:joint17
+    100030: AfterCharacter:joint18
+    100032: AfterCharacter:joint19
+    100034: AfterCharacter:joint2
+    100036: AfterCharacter:joint20
+    100038: AfterCharacter:joint21
+    100040: AfterCharacter:joint22
+    100042: AfterCharacter:joint23
+    100044: AfterCharacter:joint24
+    100046: AfterCharacter:joint25
+    100048: AfterCharacter:joint26
+    100050: AfterCharacter:joint27
+    100052: AfterCharacter:joint3
+    100054: AfterCharacter:joint5
+    100056: AfterCharacter:joint6
+    100058: AfterCharacter:joint7
+    100060: AfterCharacter:joint8
+    100062: AfterCharacter:joint9
+    100064: AfterCharacter:Left_Foot
+    100066: AfterCharacter:Left_Hand
+    100068: AfterCharacter:Left_Leg
+    100070: AfterCharacter:raymo_root
+    100072: AfterCharacter:Right_Foot
+    100074: AfterCharacter:Right_Hand
+    100076: AfterCharacter:Right_Leg
+    100078: AfterCharacter:Root_Hip
+    100080: AfterCharacter:transform5
+    100082: //RootNode
+    100084: Hair
+    100086: Hair2
+    100088: Head
+    100090: LeffEye
+    100092: Left_Ankle
+    100094: Main Body
+    100096: Mesh
+    100098: RightEye
+    100100: transform1
+    100102: transform2
+    400000: AfterCharacter:ikHandle1
+    400002: AfterCharacter:ikHandle2
+    400004: AfterCharacter:ikHandle3
+    400006: AfterCharacter:ikHandle4
+    400008: AfterCharacter:ikHandle5
+    400010: AfterCharacter:ikHandle6
+    400012: AfterCharacter:joint1
+    400014: AfterCharacter:joint10
+    400016: AfterCharacter:joint11
+    400018: AfterCharacter:joint12
+    400020: AfterCharacter:joint13
+    400022: AfterCharacter:joint14
+    400024: AfterCharacter:joint15
+    400026: AfterCharacter:joint16
+    400028: AfterCharacter:joint17
+    400030: AfterCharacter:joint18
+    400032: AfterCharacter:joint19
+    400034: AfterCharacter:joint2
+    400036: AfterCharacter:joint20
+    400038: AfterCharacter:joint21
+    400040: AfterCharacter:joint22
+    400042: AfterCharacter:joint23
+    400044: AfterCharacter:joint24
+    400046: AfterCharacter:joint25
+    400048: AfterCharacter:joint26
+    400050: AfterCharacter:joint27
+    400052: AfterCharacter:joint3
+    400054: AfterCharacter:joint5
+    400056: AfterCharacter:joint6
+    400058: AfterCharacter:joint7
+    400060: AfterCharacter:joint8
+    400062: AfterCharacter:joint9
+    400064: AfterCharacter:Left_Foot
+    400066: AfterCharacter:Left_Hand
+    400068: AfterCharacter:Left_Leg
+    400070: AfterCharacter:raymo_root
+    400072: AfterCharacter:Right_Foot
+    400074: AfterCharacter:Right_Hand
+    400076: AfterCharacter:Right_Leg
+    400078: AfterCharacter:Root_Hip
+    400080: AfterCharacter:transform5
+    400082: //RootNode
+    400084: Hair
+    400086: Hair2
+    400088: Head
+    400090: LeffEye
+    400092: Left_Ankle
+    400094: Main Body
+    400096: Mesh
+    400098: RightEye
+    400100: transform1
+    400102: transform2
+    2100000: lambert1
+    2100002: Main Body
+    2100004: Lips
+    2100006: AfterCharacter5_EyeFull
+    2100008: AfterCharacter8_EyeFull
+    2300000: Hair
+    2300002: Hair2
+    2300004: LeffEye
+    2300006: RightEye
+    3300000: Hair
+    3300002: Hair2
+    3300004: LeffEye
+    3300006: RightEye
+    4300000: Hair
+    4300002: Hair2
+    4300004: Mesh
+    4300006: RightEye
+    4300008: LeffEye
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: Mesh
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 50
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
