@@ -82,8 +82,6 @@ public class NonVRInteractionManager : MonoBehaviour {
 
     private void PickupObject(GameObject obj)
     {
-        Debug.Log("Picking Up Object");
-
         m_IsCarryingObject = true; // for lerping object around
         obj.GetComponent<Rigidbody>().isKinematic = true; // locks object in place so it won't fall
 
@@ -103,8 +101,6 @@ public class NonVRInteractionManager : MonoBehaviour {
 
     public void DropObject()
     {
-        Debug.Log("Dropping Object");
-
         m_IsCarryingObject = false; //sets false so carrying object function won't try and lerp it
 
         if (m_CarriedObject == null) //if we try and drop object, but there is no object to drop, bail out of function

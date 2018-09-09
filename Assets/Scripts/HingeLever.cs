@@ -15,7 +15,13 @@ public class HingeLever : MonoBehaviour {
     {
         Vector3 difference = playerHandLocation - m_Pivot.position;
         //using Vector3.up because transform.up is rotated
-        float angle = -Vector3.SignedAngle(difference, Vector3.up, Vector3.right);
+        //float angle = -Vector3.SignedAngle(difference, Vector3.up, Vector3.right);
+        float angle = -Vector3.Angle(difference, Vector3.up);
+        Vector3 cross = Vector3.Cross(difference, Vector3.up);
+
+        if (cross.x < 0) angle = -angle;
+
+        Debug.Log(cross); 
         //angle += 90;
 
         angle = Mathf.Clamp(angle, -MaxRotationAmount, MaxRotationAmount);
