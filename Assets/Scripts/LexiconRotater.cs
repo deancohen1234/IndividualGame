@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//gets transform of minuature lexicon in VR cave and matches it RotateLexicon is set
 public class LexiconRotater : MonoBehaviour {
 
     public Animator m_LeverAnimator;
@@ -29,6 +30,7 @@ public class LexiconRotater : MonoBehaviour {
 
     private void InputManager()
     {
+        //if Lexicon is copy, always rotate, if not then it must be unlocked to rotate
         if (!m_LexiconLocked || m_IsCopy)
         {
             RotateLexicon();
@@ -42,7 +44,7 @@ public class LexiconRotater : MonoBehaviour {
         PlayAudio();
     }
 
-    //give lexicon x number of seconds to rotate then locks it
+    //give lexicon x number of seconds to rotate then lock it
     private IEnumerator DelayLocking()
     {
         m_LexiconLocked = false;
@@ -76,11 +78,5 @@ public class LexiconRotater : MonoBehaviour {
         }
 
         transform.rotation = Quaternion.Lerp(transform.rotation, m_SmallLexiconTransform.rotation, Time.deltaTime);
-    }
-
-    private void EmmisiveHandler()
-    {
-        //GetComponent<MeshRenderer>().material.globalIlluminationFlags = MaterialGlobalIlluminationFlags.RealtimeEmissive;
-        //GetComponent<MeshRenderer>().material.EnableKeyword("_EMISSION");
     }
 }
