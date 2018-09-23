@@ -40,6 +40,7 @@ public class PotionChanger : MonoBehaviour {
             float magnitude = m_ChangingObjectRB.velocity.sqrMagnitude;
             m_CurrentMagnitude += magnitude;
 
+            //once potion is complete in transformation
             if  (m_CurrentMagnitude >= m_MagnitudeNeededForChange)
             {
                 ParticleSystem system = m_ChangingObjectRB.gameObject.GetComponentInChildren<ParticleSystem>();

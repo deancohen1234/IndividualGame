@@ -21,9 +21,6 @@ public class HingeLever : MonoBehaviour {
 
         if (cross.x < 0) angle = -angle;
 
-        Debug.Log(cross); 
-        //angle += 90;
-
         angle = Mathf.Clamp(angle, -MaxRotationAmount, MaxRotationAmount);
 
         Vector3 eulerRotation = new Vector3(angle, m_Pivot.eulerAngles.y, m_Pivot.eulerAngles.z);
