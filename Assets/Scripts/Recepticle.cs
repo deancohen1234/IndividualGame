@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Recepticle : MonoBehaviour {
 
@@ -30,8 +31,12 @@ public class Recepticle : MonoBehaviour {
 
         yield return new WaitForSeconds(m_DelaySeconds);
 
+        //level is complete
         infusedObject.SetActive(false);
         m_UICanvas.gameObject.SetActive(true);
 
+        yield return new WaitForSeconds(m_DelaySeconds);
+
+        SceneManager.LoadScene("Main Menu");
     }
 }
