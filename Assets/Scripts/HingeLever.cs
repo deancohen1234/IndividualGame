@@ -13,13 +13,15 @@ public class HingeLever : MonoBehaviour {
 
     public void SetLeverOrientation(Vector3 playerHandLocation)
     {
-        Vector3 difference = playerHandLocation - m_Pivot.position;
-        //using Vector3.up because transform.up is rotated
-        //float angle = -Vector3.SignedAngle(difference, Vector3.up, Vector3.right);
-        float angle = -Vector3.Angle(difference, Vector3.up);
-        Vector3 cross = Vector3.Cross(difference, Vector3.up);
+        //subtracting magic number to try and fix janky skip when at 0 degrees
+        Vector3 difference = playerHandLocation - (m_Pivot.position - new Vector3(0, 0.5f, 0));
 
-        if (cross.x < 0) angle = -angle;
+        float angle = -Vector3.SignedAngle(difference.normalized, Vector3.up, Vector3.right);
+        //float angle = -AngleOverAxis(difference, Vector3.up, Vector3.right) * Mathf.Rad2Deg;
+        //float angle = -Vector3.Angle(difference, Vector3.up);
+        //Vector3 cross = Vector3.Cross(difference, Vector3.up);
+
+        //if (cross.x < 0) angle = -angle;
 
         angle = Mathf.Clamp(angle, -MaxRotationAmount, MaxRotationAmount);
 
@@ -39,6 +41,14 @@ public class HingeLever : MonoBehaviour {
         float newValue = (endMin * (1 - diff)) + (endMax * diff);
 
         return newValue;
+    }
+
+    private float AngleOverAxis(Vector3 from, Vector3 to, Vector3 axis)
+    {
+        //angle in radians
+        float angle = Mathf.Acos(Vector3.Dot(from, to));
+        Vector3 rv = Vector3.Cross(from, to).normalized * angle; // todo: zero cross?
+        return Vector3.Dot(axis, rv);
     }
 
 }
