@@ -68,15 +68,6 @@ public class LexiconRotater : MonoBehaviour {
     {
         Vector3 rot = transform.rotation.eulerAngles;
 
-        if (Input.GetKeyDown(KeyCode.Semicolon))
-        {
-            m_LeverAnimator.SetTrigger("PullLever");
-        }
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            m_CageAnimator.SetTrigger("LowerCage");
-        }
-
         transform.rotation = Quaternion.Lerp(transform.rotation, m_SmallLexiconTransform.rotation, Time.deltaTime);
     }
 }
