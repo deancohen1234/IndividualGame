@@ -6978,7 +6978,7 @@ MonoBehaviour:
   m_NonVRCamera: {fileID: 2021626327}
   m_InteractDistance: 4
   m_CarryDistance: 3
-  m_ThrowStrength: 500
+  m_ThrowStrength: 300
   m_LerpSpeedMultiplier: 9
 --- !u!1 &463360740
 GameObject:
