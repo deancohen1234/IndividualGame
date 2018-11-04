@@ -20,6 +20,7 @@ public class Recepticle : MonoBehaviour {
     {
         if (other.gameObject.transform.GetComponentInChildren<Light>() != null)
         {
+            Debug.Log(other.name + gameObject.name);
             StartCoroutine(DelayFinish(other.gameObject));
         }
     }
