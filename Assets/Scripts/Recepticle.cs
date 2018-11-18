@@ -9,8 +9,9 @@ public class Recepticle : MonoBehaviour {
     public float m_DelaySeconds = 3f;
 
     public Canvas m_UICanvas;
-	// Use this for initialization
-	void Start ()
+    public Canvas m_VRUICanvas;
+    // Use this for initialization
+    void Start ()
     {
 		
 	}
@@ -35,6 +36,7 @@ public class Recepticle : MonoBehaviour {
         //level is complete
         infusedObject.SetActive(false);
         m_UICanvas.gameObject.SetActive(true);
+        m_VRUICanvas.gameObject.SetActive(true);
 
         yield return new WaitForSeconds(m_DelaySeconds);
 

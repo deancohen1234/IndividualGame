@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class NonVRInteractionManager : MonoBehaviour {
 
@@ -13,15 +14,24 @@ public class NonVRInteractionManager : MonoBehaviour {
     public float m_ThrowStrength = 200f;
     public float m_LerpSpeedMultiplier = 3f;
 
+    [Header("UI Properties")]
+    public Image m_InteractIcon;
+    public Color m_InteractIconColorChange = Color.red;
+
     private bool m_IsCarryingObject;
     private GameObject m_CarriedObject;
+    private Color m_DefaultUIColor;
 	// Use this for initialization
-	void Start () {
-		
+	void Start ()
+    {
+        m_DefaultUIColor = m_InteractIcon.color;
 	}
 	
 	// Update is called once per frame
 	void Update () {
+
+        UpdateInteractionIcon();
+
 		if (Input.GetButtonDown("Fire1"))
         {
             TryInteract(); // sends out raycast to attempt to interact with anything
@@ -53,6 +63,45 @@ public class NonVRInteractionManager : MonoBehaviour {
             cot.position = nextPos; //set new position
         }
 	}
+
+    //TODO find a way to merge this into TryInteract so it can be one function
+    private void UpdateInteractionIcon()
+    {
+        bool isInteractable = false;
+        RaycastHit hit;
+        Ray ray = new Ray(m_NonVRCamera.transform.position, m_NonVRCamera.transform.forward);  //shoot ray out of players's face
+
+        if (Physics.Raycast(ray, out hit, m_InteractDistance))
+        {
+            LayerMask mask = hit.collider.gameObject.layer; //make reference to layer mask, for easier use in if statement
+
+            if (mask == LayerMask.NameToLayer("Pickupable") || hit.collider.gameObject.GetComponent<Lever>() || hit.collider.gameObject.GetComponent<Ladder>())
+            {
+                isInteractable = true;
+            }
+
+            else
+            {
+                isInteractable = false;
+            }
+        }
+        else
+        {
+            isInteractable = false;
+        }
+
+        if (isInteractable || m_IsCarryingObject)
+        {
+            m_InteractIcon.color = m_InteractIconColorChange;
+            m_InteractIcon.transform.localScale = Vector3.one * 2;
+        }
+        
+        else
+        {
+            m_InteractIcon.color = m_DefaultUIColor;
+            m_InteractIcon.transform.localScale = Vector3.one;
+        }
+    }
 
     private void TryInteract()
     {
